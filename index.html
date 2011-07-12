@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset=utf-8 /> 
+
+<!-- 
+For converting: http://media.io/
+
+Website By: greenido.wordpress.com 
+
+-->
+<title>Ma Nishma - Audio player for friends</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="The CSS styleable jQuery media player plugin with HTML5 support!" />
+<meta name="keywords" content="jPlayer, jQuery, jQuery plugin, media, video, audio, media player, video player, audio player, mp3, mp4, m4a, m4v, aac, h264, ogg, oga, ogv, wav, webm" />
+<meta name="Author" content="Ido Green" />
+<link href="css/jPlayer.css" rel="stylesheet" type="text/css" />
+<link href="css/blue-skin.css" rel="stylesheet" type="text/css" />
+
+<!-- TODO -->
+<link rel="shortcut icon" href="/graphics/jplayer.ico" type="image/x-icon" /> 
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script type="text/javascript" src="js/jplayer.inspector.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$("#jquery_jplayer_1").jPlayer({
+		ready: function () {
+			$(this).jPlayer("setMedia", {
+		//		m4a: "http://localhost:8888/Fishball-hackton-2011/nishma/music/armin-177-s.m4a",
+		//		oga: "http://localhost:8888/Fishball-hackton-2011/nishma/music/armin-177-s.ogg"
+				oga: "http://dl.dropbox.com/u/11665819/armin-177-s.ogg"
+			}).jPlayer("play");
+		},
+		ended: function (event) {
+			$(this).jPlayer("play");
+		},
+	//	swfPath: "js",
+		supplied: "oga"
+	});
+
+	$("#jplayer_inspector").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
+});
+
+</script>
+<script type="text/javascript">
+(function() {
+	console.log ("--flattr API loaded --");
+		var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+		s.type = 'text/javascript';
+		s.async = true;
+		s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+		t.parentNode.insertBefore(s, t);
+})();
+</script>
+
+</head>
+<body class="demo">
+<div id="container">
+
+	<header>
+	<a href="/"><img src="imgs/logo.png" ><h1>Ma Nishma - Audio player for friends</h1> </img>
+	</a>
+
+		<nav class="main">
+			<ul>
+				<li id="home"><a href="/">home</a></li>
+				<li id="about"><a href="http://about.me/greenido" target="_blank">about</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div id="content_main">
+		<section>
+		<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+
+		<div class="jp-audio">
+			<div class="jp-type-single">
+				<div id="jp_interface_1" class="jp-interface">
+					<ul class="jp-controls">
+						<li><a href="#" class="jp-play" tabindex="1">play</a></li>
+						<li><a href="#" class="jp-pause" tabindex="1">pause</a></li>
+						<li><a href="#" class="jp-stop" tabindex="1">stop</a></li>
+						<li><a href="#" class="jp-mute" tabindex="1">mute</a></li>
+						<li><a href="#" class="jp-unmute" tabindex="1">unmute</a></li>
+					</ul>
+					<div class="jp-progress">
+						<div class="jp-seek-bar">
+							<div class="jp-play-bar"></div>
+						</div>
+					</div>
+					<div class="jp-volume-bar">
+						<div class="jp-volume-bar-value"></div>
+					</div>
+					<div class="jp-current-time"></div>
+					<div class="jp-duration"></div>
+				</div>
+				<div id="jp_playlist_1" class="jp-playlist">
+					<ul>
+						<li>Armin ASOT 177</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	     </section>
+	</div>
+	
+	<aside>
+
+			<div class="section highlight">
+			TODO - chat module
+		</div>
+
+		<div class="section highlight">
+			<h2>Tweet With Us!</h2>
+			<p>Help the music with <a href="http://twitter.com/!#/MaNishma" alt="twitter" title="Twitter account">@MaNishma</a>.</p>
+		</div>
+
+			
+	</aside>
+	<footer>
+		<p>
+			<img src="imgs/armin-hands.png" />
+			<a href="http://greenido.wordpress.com"/>&copy; Ido's Blog</a>
+		</p>
+		<a id="twitter" href="http://twitter.com/greenido"><img alt="twitter" src="imgs/twitter_small.png"/>follow on twitter </a>
+	</footer>
+</div>
+</body>
+</html>
