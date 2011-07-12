@@ -370,6 +370,7 @@ div.jp-playlist ul {
 div.jp-type-single div.jp-playlist li {
     padding:5px 0 5px 20px;
     font-weight:bold;
+	border-bottom:1px solid yellow;
 }
 div.jp-type-playlist div.jp-playlist li {
     padding:5px 0 4px 20px;

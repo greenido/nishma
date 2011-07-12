@@ -6,6 +6,8 @@
 <!-- 
 For converting: http://media.io/
 
+Doc: https://developer.mozilla.org/En/HTML/Element/audio
+
 Website By: greenido.wordpress.com 
 
 -->
@@ -14,23 +16,25 @@ Website By: greenido.wordpress.com
 <meta name="description" content="The CSS styleable jQuery media player plugin with HTML5 support!" />
 <meta name="keywords" content="Player, friends, media, video, audio, media player, video player, audio player, mp3, mp4, m4a, m4v, aac, h264, ogg, oga, ogv, wav, webm" />
 <meta name="Author" content="Ido Green" />
+
 <link href="css/jPlayer.css" rel="stylesheet" type="text/css" />
 <link href="css/blue-skin.css" rel="stylesheet" type="text/css" />
 
 <!-- TODO -->
-<link rel="shortcut icon" href="/graphics/jplayer.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="favicon.gif" type="image/x-icon" /> 
 <!--[if IE]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]--> 
 
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-<script type="text/javascript" src="js/jplayer.inspector.js"></script>
-<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script src="js/jplayer.inspector.js"></script>
+<script src="js/jquery.jplayer.min.js"></script>
+<script src="js/jplayer.list.js"></script>
 
 <script>
 $(document).ready(function(){
 
-	$("#jquery_jplayer_1").jPlayer({
+/*	$("#jquery_jplayer_1").jPlayer({
 		ready: function () {
 			$(this).jPlayer("setMedia", {
 		//		m4a: "http://localhost:8888/Fishball-hackton-2011/nishma/music/armin-177-s.m4a",
@@ -46,6 +50,7 @@ $(document).ready(function(){
 	});
 
 	$("#jplayer_inspector").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
+*/
 });
 
 </script>
@@ -65,7 +70,7 @@ $(document).ready(function(){
 <div id="container">
 
 	<header>
-	<a href="/"><img src="imgs/logo.png" ><h1>Ma Nishma - Audio player for friends</h1> </img>
+	<a href="/"><img src="imgs/logo.png" /><h1>Ma Nishma - Audio player for friends</h1>
 	</a>
 
 		<nav class="main">
